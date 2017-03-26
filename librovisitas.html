@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Libro de visitas</title>
+  </head>
+
+  <body>
+    <h1>StarKiller</h1>
+    <h3>Yo soy tu padre</h3>
+    <hr>
+
+    <div id="comentariosAnteriores">
+      <p>Comentarios:</p>
+    </div>
+
+    <hr>
+    <form id="botones">
+        <input type="button" name="texto-grande" value="texto-grande" onclick="">
+        <input type="button" name="texto-mediano" value="texto-mediano" onclick="">
+        <input type="button" name="texto-chico" value="texto-chico" onclick="">
+        <button id="color-texto" onclick="colorTexto()">
+          <img src="texto-en-color.jpg" height="15"/>
+        </button>
+        <button name="color-fondo" onclick="">
+          <img src="color-fondo.jpg" height="15"/>
+        </button>
+        <button name="alinear-izq" onclick="">
+          <img src="alineacion-izquierda.jpg" height="15"/>
+        </button>
+        <button name="centrar" onclick="">
+          <img src="centrar.png" height="15"/>
+        </button>
+        <button name="alinear-der" onclick="">
+          <img src="alinear-derecha.jpg" height="15"/>
+        </button>
+        <br>
+        <textarea id="comentario" rows="8" cols="40" placeholder="Comentario" oninput="previo()">
+        </textarea>
+        <button onclick="enviar()">Enviar</button>
+        <br>
+        <p id="previsualizacion"></p>
+    </form>
+      <script src="librovisitas.js"></script>
+  </body>
+</html>
