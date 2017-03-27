@@ -4,42 +4,43 @@
     <title>Libro de visitas</title>
   </head>
 
-  <body>
-    <h1>StarKiller</h1>
-    <h3>Yo soy tu padre</h3>
-    <hr>
+  <body background="imagenes/fondo-estrellas.gif">
+      <h1 style="text-align:center; color:#FFFFFF">StarKiller</h1>
+      <h3 style="color:#FFFFFF; margin:20px;">Libro de visitas</h3>
+      <hr>
 
-    <div id="comentariosAnteriores">
-      <p>Comentarios:</p>
-    </div>
+      <div style="margin:20px; color:#66CCFF">
+        <p style="color:#CC99FF">Comentarios:</p>
+        <ol id="comentariosAnteriores"></ol>
+      </div>
 
-    <hr>
-    <form id="botones">
+      <hr>
+      <form id="botones" style="margin:20px;">
         <input type="button" name="texto-grande" value="texto-grande" onclick="">
         <input type="button" name="texto-mediano" value="texto-mediano" onclick="">
         <input type="button" name="texto-chico" value="texto-chico" onclick="">
         <button id="color-texto" onclick="colorTexto()">
-          <img src="texto-en-color.jpg" height="15"/>
+          <img src="imagenes/texto-en-color.jpg" height="15"/>
         </button>
         <button name="color-fondo" onclick="">
-          <img src="color-fondo.jpg" height="15"/>
+          <img src="imagenes/color-fondo.jpg" height="15"/>
         </button>
         <button name="alinear-izq" onclick="">
-          <img src="alineacion-izquierda.jpg" height="15"/>
+          <img src="imagenes/alineacion-izquierda.jpg" height="15"/>
         </button>
         <button name="centrar" onclick="">
-          <img src="centrar.png" height="15"/>
+          <img src="imagenes/centrar.png" height="15"/>
         </button>
         <button name="alinear-der" onclick="">
-          <img src="alinear-derecha.jpg" height="15"/>
+          <img src="imagenes/alinear-derecha.jpg" height="15"/>
         </button>
         <br>
-        <textarea id="comentario" rows="8" cols="40" placeholder="Comentario" oninput="previo()">
-        </textarea>
-        <button onclick="enviar()">Enviar</button>
+        <textarea style="background-color:rgba(255,230,355, 0.5);" id="comentario" rows="8" cols="80" placeholder="Comentario" oninput="previo()"></textarea>
         <br>
-        <p id="previsualizacion"></p>
-    </form>
+        <button type="submit" onclick="enviar(event)" value="Agregar">Enviar</button>
+        <br>
+        <p style="color:#FFFFFF" id="previsualizacion"></p>
+      </form>
       <script src="librovisitas.js"></script>
   </body>
 </html>

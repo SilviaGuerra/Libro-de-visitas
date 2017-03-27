@@ -3,16 +3,16 @@ function previo(){
   document.getElementById("previsualizacion").innerHTML = preview;
 } //con esta funcion se previsualiza el comentario hecho
 
+function enviar(event){
+  event.preventDefault(); //esto se pone para decirle al form que ejecute la funcion sin refrescarse
+  var comentarioHecho = document.getElementById("comentario").value;
+  var nuevoComentario = document.createElement("li");
+  nuevoComentario.innerHTML = comentarioHecho;
+  document.getElementById("comentariosAnteriores").appendChild(nuevoComentario);
+  document.getElementById("comentario").value = "";
+}
+
 function colorTexto(){
   var colorLetra =prompt("Escriba el código hexadecimal");
   document.getElementById("color-texto").style.color= colorLetra;
-}
-
-function enviar(){
-  var nuevoComentario = document.createElement("P");
-  var comentario = document.getElementById("comentario").value;
-  var textNode = document.createTextNode(comentario);
-  var comentariosAnteriores = document.getElementById("comentariosAnteriores");
-  nuevoComentario.appendChild(textNode);
-  comentariosAnteriores.appendChild(nuevoComentario);
 }
