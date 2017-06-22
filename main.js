@@ -8,6 +8,11 @@ function colorTexto(){
   document.getElementById("comentario").style.color= colorLetra;
 } //Esta función debería cambiar el color del texto, pero aún no funciona
 
+function cambiarTexto(){
+  var preview = document.getElementById("comentario");
+  preview.style.fontsize="48px";
+}
+
 function enviar(event){
   event.preventDefault(); //esto se pone para decirle al form que ejecute la funcion sin refrescarse
   var comentarioHecho = document.getElementById("comentario").value; //guarda en una variable lo que se escribe en el textarea
