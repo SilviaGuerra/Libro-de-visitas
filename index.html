@@ -16,23 +16,23 @@
         <ol id="comentariosAnteriores"></ol>
       </div>
 
-      <form id="botones">
-        <button name="texto-grande" value="Texto-grande" onclick="cambiarTexto()">Texto grande</button>
-        <button name="texto-mediano" value="Texto-mediano" onclick="">Texto mediado</button>
-        <button name="texto-chico" value="Texto-chico" onclick="">Texto pequeño</button>
+      <div id="botones">
+        <button name="texto-grande" value="Texto-grande" onclick="textoGrande()">Texto grande</button>
+        <button name="texto-mediano" value="Texto-mediano" onclick="textoMediano()">Texto mediado</button>
+        <button name="texto-chico" value="Texto-chico" onclick="textoChico()">Texto pequeño</button>
         <button id="color-texto" onclick="colorTexto()">
           <img src="imagenes/texto-en-color.svg"/>
         </button>
-        <button name="color-fondo" onclick="">
+        <button name="color-fondo" onclick="colorFondo()">
           <img src="imagenes/color-fondo.svg"/>
         </button>
-        <button name="alinear-izq" onclick="">
+        <button name="alinear-izq" onclick="alinearIzq()">
           <img src="imagenes/alineacion-izquierda.svg"/>
         </button>
-        <button name="centrar" onclick="">
+        <button name="centrar" onclick="centrar()">
           <img src="imagenes/centrar.svg"/>
         </button>
-        <button name="alinear-der" onclick="">
+        <button name="alinear-der" onclick="alinearDer()">
           <img src="imagenes/alinear-derecha.svg"/>
         </button>
 
@@ -41,7 +41,7 @@
         <button type="submit" onclick="enviar(event)" value="Agregar">Enviar</button>
 
         <p id="previsualizacion"></p>
-      </form>
+      </div>
       <script src="js/main.js"></script>
   </body>
 </html>

@@ -3,21 +3,53 @@ function previo(){
   document.getElementById("previsualizacion").innerHTML = preview;
 } //Con esta funcion se previsualiza el comentario hecho
 
-function colorTexto(){
-  var colorLetra =prompt("Escriba el código hexadecimal");
-  document.getElementById("comentario").style.color= colorLetra;
-} //Esta función debería cambiar el color del texto, pero aún no funciona
-
-function cambiarTexto(){
-  var preview = document.getElementById("comentario");
-  preview.style.fontsize="48px";
+function textoGrande(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.fontSize= "48px";
 }
 
-function enviar(event){
-  event.preventDefault(); //esto se pone para decirle al form que ejecute la funcion sin refrescarse
-  var comentarioHecho = document.getElementById("comentario").value; //guarda en una variable lo que se escribe en el textarea
-  var nuevoComentario = document.createElement("p"); //crea un elemento parrafo
-  nuevoComentario.innerHTML = comentarioHecho; //lo que se escribio en el textarea se pone entre el elemento creado (li)
-  document.getElementById("comentariosAnteriores").appendChild(nuevoComentario); //el nuevo elemento que esta en li se le agrega a la sección que yo quiera imprimirlo
-  document.getElementById("comentario").value = ""; //Vacía el text area para un nuevo comentario
-} //imprime los comentarios hechos
+function textoMediano(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.fontSize= "28px";
+}
+
+function textoChico(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.fontSize= "8px";
+}
+
+function colorTexto(){
+  var colorLetra = prompt("Escriba el código hexadecimal");
+  document.getElementById("previsualizacion").style.color= colorLetra;
+}
+
+function colorFondo(){
+  var fondo = prompt("Escriba el código hexadecimal");
+  document.getElementById("previsualizacion").style.background= fondo;
+}
+
+function alinearIzq(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.textAlign= "left";
+}
+
+function centrar(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.textAlign= "center";
+}
+
+function alinearDer(){
+  var preview = document.getElementById("previsualizacion");
+  preview.style.textAlign= "right";
+}
+
+
+function enviar(){
+  var comentarios = document.getElementById('comentariosAnteriores');
+  var nuevoComentario = document.getElementById("previsualizacion");
+  var nuevoNodo = nuevoComentario.cloneNode(true);
+  nuevoNodo.id = Date.now();
+  comentarios.insertBefore(nuevoNodo, comentarios.firstChild);
+
+  document.getElementById("comentario").value = "";
+}
