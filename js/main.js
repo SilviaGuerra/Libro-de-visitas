@@ -16,7 +16,7 @@ function cambiarTexto(){
 function enviar(event){
   event.preventDefault(); //esto se pone para decirle al form que ejecute la funcion sin refrescarse
   var comentarioHecho = document.getElementById("comentario").value; //guarda en una variable lo que se escribe en el textarea
-  var nuevoComentario = document.createElement("li"); //crea un elemento lista
+  var nuevoComentario = document.createElement("p"); //crea un elemento parrafo
   nuevoComentario.innerHTML = comentarioHecho; //lo que se escribio en el textarea se pone entre el elemento creado (li)
   document.getElementById("comentariosAnteriores").appendChild(nuevoComentario); //el nuevo elemento que esta en li se le agrega a la sección que yo quiera imprimirlo
   document.getElementById("comentario").value = ""; //Vacía el text area para un nuevo comentario

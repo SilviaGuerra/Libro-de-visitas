@@ -3,46 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Libro de visitas</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/death-star.png">
+    <link href="https://fonts.googleapis.com/css?family=Coustard|Stardos+Stencil" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
   </head>
 
-  <body background="imagenes/Estrella-muerte.jpg">
-      <h1 style="text-align:center; color:#FFFFFF">StarKiller</h1>
-      <h3 style="color:#FFFFFF; margin:20px;">Libro de visitas</h3>
-      <hr>
+  <body>
+      <h1>Libro de visitas - StarKiller</h1>
 
-      <div style="margin:20px; color:#FFFFFF">
-        <p style="color:#FFFFFF">Comentarios:</p>
+      <div class="comentarios">
+        <p>Comentarios:</p>
         <ol id="comentariosAnteriores"></ol>
       </div>
 
-      <hr>
-      <form id="botones" style="margin:20px;">
-        <input type="button" name="texto-grande" value="Texto-grande" onclick="cambiarTexto()">
-        <input type="button" name="texto-mediano" value="Texto-mediano" onclick="">
-        <input type="button" name="texto-chico" value="Texto-chico" onclick="">
+      <form id="botones">
+        <button name="texto-grande" value="Texto-grande" onclick="cambiarTexto()">Texto grande</button>
+        <button name="texto-mediano" value="Texto-mediano" onclick="">Texto mediado</button>
+        <button name="texto-chico" value="Texto-chico" onclick="">Texto pequeño</button>
         <button id="color-texto" onclick="colorTexto()">
-          <img src="imagenes/texto-en-color.jpg" height="15"/>
+          <img src="imagenes/texto-en-color.svg"/>
         </button>
         <button name="color-fondo" onclick="">
-          <img src="imagenes/color-fondo.jpg" height="15"/>
+          <img src="imagenes/color-fondo.svg"/>
         </button>
         <button name="alinear-izq" onclick="">
-          <img src="imagenes/alineacion-izquierda.jpg" height="15"/>
+          <img src="imagenes/alineacion-izquierda.svg"/>
         </button>
         <button name="centrar" onclick="">
-          <img src="imagenes/centrar.png" height="15"/>
+          <img src="imagenes/centrar.svg"/>
         </button>
         <button name="alinear-der" onclick="">
-          <img src="imagenes/alinear-derecha.jpg" height="15"/>
+          <img src="imagenes/alinear-derecha.svg"/>
         </button>
-        <br>
 
-        <textarea style="background-color:rgba(102,102,102, 0.4); color:#FFFFFF;" id="comentario" rows="8" cols="80" placeholder="Comentario" oninput="previo()"></textarea>
-        <br>
+        <textarea id="comentario" rows="8" cols="90" placeholder="Comentario" oninput="previo()"></textarea>
+
         <button type="submit" onclick="enviar(event)" value="Agregar">Enviar</button>
-        <br>
-        <p style="color:#FFFFFF" id="previsualizacion"></p>
+
+        <p id="previsualizacion"></p>
       </form>
-      <script src="librovisitas.js"></script>
+      <script src="js/main.js"></script>
   </body>
 </html>
